@@ -15,8 +15,11 @@ config.optimizer = "adam"
 config.epochs = 10
 
 # load data
+#X_test is a two dimesional array with images for sign language
+#Y_test are labels, 24 labels (J & Z are not present)
 (X_test, y_test) = signdata.load_test_data()
 (X_train, y_train) = signdata.load_train_data()
+print(y_train.shape[0)] - will know amount of items in train data
 
 img_width = X_test.shape[1]
 img_height = X_test.shape[2]
